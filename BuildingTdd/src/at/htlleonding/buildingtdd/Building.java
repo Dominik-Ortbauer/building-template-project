@@ -7,7 +7,9 @@ import java.util.List;
 public class Building {
     List<String> mResidents = new LinkedList<>();
     public Building(int id, String resident) {
-        mResidents.add(resident);
+        if(resident != null) {
+            mResidents.add(resident);
+        }
     }
 
     public Building(int id, String[] residents) {

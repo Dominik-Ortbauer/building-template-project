@@ -51,4 +51,10 @@ class BuildingUT {
         building.removeResident("Herbert");
         Assertions.assertEquals(0, building.getNumberOfResidents());
     }
+
+    @Test
+    void itShouldHaveZeroResidentAfterInstantiationWithNull() {
+        Building building = new Building(1, (String)null);
+        Assertions.assertEquals(0, building.getNumberOfResidents());
+    }
 }
