@@ -7,9 +7,7 @@ import java.util.List;
 public class Building {
     List<String> mResidents = new LinkedList<>();
     public Building(int id, String resident) {
-        if(resident != null) {
-            mResidents.add(resident);
-        }
+        addResident(resident);
     }
 
     public Building(int id, String[] residents) {
@@ -23,7 +21,7 @@ public class Building {
     }
 
     public void addResident(String resident) {
-        if(!mResidents.contains(resident)) {
+        if(resident != null && !mResidents.contains(resident)) {
             mResidents.add(resident);
         }
     }

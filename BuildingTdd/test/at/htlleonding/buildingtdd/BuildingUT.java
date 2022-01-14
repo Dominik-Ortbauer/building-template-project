@@ -57,4 +57,10 @@ class BuildingUT {
         Building building = new Building(1, (String)null);
         Assertions.assertEquals(0, building.getNumberOfResidents());
     }
+
+    @Test
+    void itShouldHaveZeroResidentAfterInstantiationWithMultipleNull() {
+        Building building = new Building(1, new String[]{null, null});
+        Assertions.assertEquals(0, building.getNumberOfResidents());
+    }
 }
