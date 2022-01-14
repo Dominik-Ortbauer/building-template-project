@@ -12,4 +12,10 @@ class BuildingUT {
             Building building = new Building(1, "Herbert");
         });
     }
+
+    @Test
+    void itShouldHaveOneResidentAfterInstantiation() {
+        Building building = new Building(1, "Herbert");
+        Assertions.assertEquals(1, building.getNumberOfResidents());
+    }
 }
