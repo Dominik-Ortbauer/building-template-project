@@ -44,4 +44,11 @@ class BuildingUT {
         Building building = new Building(1, new String[]{"Herbert", "Herbert"});
         Assertions.assertEquals(1, building.getNumberOfResidents());
     }
+
+    @Test
+    void itShouldHaveZeroResidentAfterInstantiationAndRemoval() {
+        Building building = new Building(1, "Herbert");
+        building.removeResident("Herbert");
+        Assertions.assertEquals(0, building.getNumberOfResidents());
+    }
 }

@@ -25,4 +25,8 @@ public class Building {
             mResidents.add(resident);
         }
     }
+
+    public void removeResident(String resident) {
+        mResidents.remove(resident);
+    }
 }
