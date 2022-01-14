@@ -11,7 +11,9 @@ public class Building {
     }
 
     public Building(int id, String[] residents) {
-        mResidents.addAll(List.of(residents));
+        for(String s : residents) {
+            addResident(s);
+        }
     }
 
     public int getNumberOfResidents() {

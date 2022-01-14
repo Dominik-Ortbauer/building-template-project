@@ -38,4 +38,10 @@ class BuildingUT {
         building.addResident("Herbert");
         Assertions.assertEquals(1, building.getNumberOfResidents());
     }
+
+    @Test
+    void itShouldHaveOneResidentAfterInstantiationWithTheSameResidentTwice() {
+        Building building = new Building(1, new String[]{"Herbert", "Herbert"});
+        Assertions.assertEquals(1, building.getNumberOfResidents());
+    }
 }
