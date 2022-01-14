@@ -17,4 +17,8 @@ public class Building {
     public int getNumberOfResidents() {
         return mResidents.size();
     }
+
+    public void addResident(String resident) {
+        mResidents.add(resident);
+    }
 }
