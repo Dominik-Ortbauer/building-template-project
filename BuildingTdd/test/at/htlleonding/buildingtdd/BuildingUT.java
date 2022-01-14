@@ -31,4 +31,11 @@ class BuildingUT {
         building.addResident("Max");
         Assertions.assertEquals(2, building.getNumberOfResidents());
     }
+
+    @Test
+    void itShouldHaveOneResidentAfterInstantiationAndAddingTheSameOne() {
+        Building building = new Building(1, "Herbert");
+        building.addResident("Herbert");
+        Assertions.assertEquals(1, building.getNumberOfResidents());
+    }
 }

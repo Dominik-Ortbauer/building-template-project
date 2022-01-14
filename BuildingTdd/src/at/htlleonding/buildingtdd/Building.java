@@ -19,6 +19,8 @@ public class Building {
     }
 
     public void addResident(String resident) {
-        mResidents.add(resident);
+        if(!mResidents.contains(resident)) {
+            mResidents.add(resident);
+        }
     }
 }
