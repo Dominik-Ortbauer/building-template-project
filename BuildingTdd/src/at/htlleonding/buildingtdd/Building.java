@@ -1,11 +1,20 @@
 package at.htlleonding.buildingtdd;
 
-public class Building {
-    public Building(int id, String resident) {
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
+public class Building {
+    List<String> mResidents = new LinkedList<>();
+    public Building(int id, String resident) {
+        mResidents.add(resident);
+    }
+
+    public Building(int id, String[] residents) {
+        mResidents.addAll(List.of(residents));
     }
 
     public int getNumberOfResidents() {
-        return 1;
+        return mResidents.size();
     }
 }

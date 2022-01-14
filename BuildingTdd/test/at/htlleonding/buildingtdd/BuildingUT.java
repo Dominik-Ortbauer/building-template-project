@@ -18,4 +18,10 @@ class BuildingUT {
         Building building = new Building(1, "Herbert");
         Assertions.assertEquals(1, building.getNumberOfResidents());
     }
+
+    @Test
+    void itShouldHaveTwoResidentAfterInstantiationWithArray() {
+        Building building = new Building(1, new String[]{"Herbert", "Max"});
+        Assertions.assertEquals(2, building.getNumberOfResidents());
+    }
 }
